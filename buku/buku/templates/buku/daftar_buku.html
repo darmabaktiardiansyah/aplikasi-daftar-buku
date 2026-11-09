@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Daftar Buku</title>
+</head>
+<body>
+    <h1>Daftar Buku</h1>
+
+    <ul>
+        {% for buku in daftar_buku %}
+        <li>
+            <a href="{% url 'detail_buku' buku.id %}">
+                {{ buku.judul }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
